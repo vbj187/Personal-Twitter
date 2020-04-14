@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const Twit = require('twit');
 const cors = require('cors');
-let config = require('./config')
+let config = require('./credential')
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 
 app.post('/status', (req, res) => {
-    const twitBot = new Twit(config);
+    const twitBot = new Twit(credential);
     let text = req.body;
     console.log(text);
     twitBot.post('statuses/update', text, function (err, data, resp) {
@@ -24,7 +24,7 @@ app.post('/status', (req, res) => {
 });
 
 app.get('/gettweets', (req, res) => {
-    const twitView = new Twit(config);
+    const twitView = new Twit(credential);
     twitView.get('search/tweets', { q: 'Adhi9Darth', count: 100 },
         function (err, data, response) {
             const result = { ...data.statuses };
