@@ -1,1 +1,55 @@
+body {
+	/* margin: 10%; */
+	color:black;
+	background: #111111;
+	font-family: sans-serif;
+}
 
+button {
+		background: transparent;
+}
+
+.blackCon{
+    background-color: #192a56;
+}
+
+.navbar-header{
+    justify-content: center;
+}
+
+.md-form{
+    padding-top: 5px;
+    width: 100%;
+    min-height: 50px;
+}
+
+.container{
+    width: 60%;
+    align-content: center;
+    margin-right: 20%;
+    background-color: #0c2461;
+    height: 120px;
+}
+
+.btn{
+    padding-top: 5px;
+    background-color: whitesmoke;
+    text-align: center;
+    height: 40px;
+}
+
+textarea {
+    resize: none;
+    background-color: #192a56;
+    border-color: #192a56;
+}
+
+textarea.ta10em {
+    height: 10em;
+}
+
+#form7{
+    background-color: #192a56;
+    border-color: #192a56;
+    height: 50px;
+}
