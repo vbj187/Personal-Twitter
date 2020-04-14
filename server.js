@@ -24,7 +24,7 @@ app.post('/status', (req, res) => {
 });
 
 app.get('/gettweets', (req, res) => {
-    const twitView = new Twit(config);
+    const twitView = new Twit(credential);
     twitView.get('search/tweets', { q: 'Adhi9Darth', count: 100 },
         function (err, data, response) {
             const result = { ...data.statuses };
